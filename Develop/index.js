@@ -2,6 +2,33 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+const generatereadme = (answers) =>
+ `# ${answers.title}
+
+## Description 
+ ${answers.description}
+    
+## Installation Instructions
+* Please follow the following instrutions..
+ ${answers.install}
+    
+## Instructions
+ ${answers.usage}
+    
+## Contributors
+ ${answers.contribution}
+    
+## Test
+ ${answers.test}
+    
+## License 
+ ${answers.license}
+
+## Questions?!
+ ${answers.questions}
+ ${answers.email}`
+ ;
+    
 inquirer
     .prompt ([{
     type: 'input',
@@ -14,7 +41,7 @@ inquirer
 },{
     type: 'input',
     name: 'install',
-    message: 'What are the installation instructions?'
+    message: 'How do you install the Project?'
 },{
     type: 'input',
     name: 'usage',
@@ -31,12 +58,21 @@ inquirer
     type: 'input',
     name: 'license',
     message: 'Please choose a license for your project..'
+},{
+    type: 'input',
+    name: 'questions',
+    message: 'Please provide your Github Profile link'
+},
+{
+    type: 'input',
+    name: 'email',
+    message: 'Please provide your email address'
 },
 ])
 .then((answers) => {
     const readme = generatereadme(answers);
 
-fs.writeFile('ReadMe.md', data, (err) =>
+fs.writeFile('ReadMe.md', readme, (err) =>
     err ? console.log(err) : console.log('Check out your new read me!')
 );
 });
