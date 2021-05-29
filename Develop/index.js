@@ -2,8 +2,14 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// data writen in the readme 
 const generatereadme = (answers) =>
  `# ${answers.title}
+## Table of Contents 
+
+[Description](#Description)
+[Questions](#Questions?!)
+
 
 ## Description 
  ${answers.description}
@@ -28,7 +34,7 @@ const generatereadme = (answers) =>
  ${answers.questions}
  ${answers.email}`
  ;
-    
+ // questions terminal asks the user   
 inquirer
     .prompt ([{
     type: 'input',
@@ -71,7 +77,7 @@ inquirer
 ])
 .then((answers) => {
     const readme = generatereadme(answers);
-
+//write the answers pulled from above into readme 
 fs.writeFile('ReadMe.md', readme, (err) =>
     err ? console.log(err) : console.log('Check out your new read me!')
 );
