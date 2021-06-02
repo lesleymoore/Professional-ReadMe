@@ -28,7 +28,11 @@ This is a node.js assignment to quickly build a Professional README.
 
  ## Test 
 
- The user can test the application using the terminal and command node index.js. If any errors occur the user should refer to the [Questions](#Questions) area and contact me.
+ The user can test the application using the terminal and command node index.js.
+ 
+ <img src=./node.png> 
+ 
+ If any errors occur the user should refer to the [Questions](#Questions) area and contact me.
 
  ## Video 
 
