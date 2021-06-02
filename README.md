@@ -36,6 +36,8 @@ This is a node.js assignment to quickly build a Professional README.
 
  ## Video 
 
+ [Video Walkthrough](https://drive.google.com/file/d/1pJ7kkEIUpKPkaT_Gvs2NFJrsU0vm4qoT/view)
+
  ## Contributing 
 
    * Lesley Moore 
